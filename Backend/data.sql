@@ -1,6 +1,6 @@
 -- user information data and skincare preferences
 
-CREATE TABLE user_data (
+CREATE TABLE user_data ( --user data
     id INTEGER PRIMARY KEY,
     email VARCHAR(255) UNIQUE NOT NULL,
     hash_password TEXT NOT NULL,
@@ -9,21 +9,21 @@ CREATE TABLE user_data (
     budget_range VARCHAR(50)
 );
 
-CREATE TABLE products (
+CREATE TABLE products ( --products
     product_id INTEGER PRIMARY KEY,
     name VARCHAR(255) UNIQUE NOT NULL,
     category VARCHAR(50),
     price DECIMAL(10, 2)
 );
 
-CREATE TABLE ingredients (
+CREATE TABLE ingredients ( -- ingredients
     id INTEGER PRIMARY KEY,
     name VARCHAR(255) UNIQUE NOT NULL,
     comedogenic_grade INTEGER,
     irritation_grade INTEGER
 );
 
-CREATE TABLE product_ingredients (
+CREATE TABLE product_ingredients ( --ingredients in products
     product_id INTEGER,
     ingredient_id INTEGER
 );
