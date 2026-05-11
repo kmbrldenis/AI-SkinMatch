@@ -1,4 +1,5 @@
 from dbs import engine, Base
-import models
+from services.reccomendation_engine import recommend_products
 
 Base.metadata.create_all(bind=engine)
+
