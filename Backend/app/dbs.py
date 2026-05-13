@@ -29,6 +29,12 @@ class Product (Base):
     category = Column(String (50))
     price = Column(DECIMAL (10, 2))
 
+    ingredients = relationship(
+        "Ingredients",
+        secondary="product_ingredients",
+        back_populates="products"
+    )
+
 class Ingredients (Base):
 
     __tablename__ = "ingredients"
@@ -37,6 +43,12 @@ class Ingredients (Base):
     name = Column(String (255), unique = True, index = True)
     comedogenic_grade = Column(Integer)
     irritation_grade = Column(Integer)
+
+    products = relationship(
+        "Product",
+        secondary="product_ingredients",
+        back_populates="ingredients"
+    )
 
 class ProductIngredient(Base):
     __tablename__ = "product_ingredients"
