@@ -1,20 +1,12 @@
-/* :root {
+:root {
   --primary-color: #F694C1;
   --secondary-color: #E4C1F9;
   --third-color: #D3F8E2;
   --foruth-color: #EDE7B1;
-  --fifth-color: #A9DEF9;
+  --fifth-color: #000000;
   --background-color: #fff;
 }
 
-#root {
-  color: var(--primary-color);
-}
-
-#background {
-  background-color: var(--primary-color);
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  z-index: 20;
+.Header {
+  color : var(--primary-color);
 }
