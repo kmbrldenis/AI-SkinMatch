@@ -2,8 +2,8 @@
 function Footer () {
 
     return (
-        <body> 
-            <p> Website name Goes here </p>
+        <body className = "footer"> 
+            <p> &copy; {new Date().getFullYear()} Skin Match Application </p>
         </body>
     )
 

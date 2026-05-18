@@ -4,16 +4,15 @@ function Header () {
 
     return (
         <header className = "Header">
-            <h1>Skin Match</h1>
+            <p id = "greeting"> </p>
+            <h1 id = "welcome-message">Hello New Skin</h1>
             <nav>
-                <ul>
+                <ul id = "nav-list">
                     <li> <a href = "#"> Home </a> </li>
                     <li> <a href = "#">About </a></li>
-                    <li> <a href = "#">Take the quiz </a></li>
                     <li> <a href = "#"> Contact us </a></li>
                 </ul>
             </nav>
-            <hr></hr>
         </header>
     )
 }
