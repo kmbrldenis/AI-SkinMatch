@@ -1,5 +1,4 @@
-import backgroundvideo from "./assets/vecteezy_pastel-cosmetic-creams-in-glass-jars-against-orange-and_72001533.mp4"
-
+import backgroundvideo from "./assets/vecteezy_a-facial-cleanser-some-flower-petals-placed-on-a-rock-next_51025826.mp4"
 
 function Background () {
     return (

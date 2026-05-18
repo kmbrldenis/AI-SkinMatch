@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #F694C1;
-  --secondary-color: #E4C1F9;
+  --primary-color: #0D1821;
+  --secondary-color: #344966;
   --third-color: #D3F8E2;
   --foruth-color: #EDE7B1;
   --fifth-color: #000000;
@@ -19,11 +19,10 @@
 /* Main button content and animation */
 
 .midpage-button {
-  color : var(--secondary-color);
-  background-color: #E4C1F9;
+  background-color: var(--secondary-color);
 
   padding : 10px 20px;
-  border-radius : 10px;
+  border-radius : 30px;
   border : none;
   cursor : pointer;
   height: 50px;
@@ -35,10 +34,12 @@
   justify-content : center;
   align-items : center;
   height : 50vh;
+  text-decoration: none;
 }
 
 .midpage-button:hover {
   animation : increase 0.5s forwards;
+  background-color : #3d5679;
 }
 
 @keyframes increase {
@@ -78,8 +79,6 @@
 
   width: 100%;
   height: 100vh;
-
-  overflow: hidden;
   z-index: -1;
 }
 
