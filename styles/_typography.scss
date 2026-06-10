@@ -1,0 +1,260 @@
+// ============================================
+// Lumina · AI-SkinMatch
+// Typography — Dusk Bloom
+// ============================================
+
+@use 'variables' as *;
+
+// ─── Google Fonts Import ──────────────────
+// Add this to your index.html <head> instead
+// if you're using Next.js or Vite:
+//
+// <link href="https://fonts.googleapis.com/css2?
+//   family=Cormorant+Garant:ital,wght@0,400;0,500;1,400;1,500
+//   &family=DM+Sans:opsz,wght@9..40,400;9..40,500
+//   &display=swap" rel="stylesheet">
+
+
+// ─── Base ─────────────────────────────────
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family:   $font-body;
+  font-size:     $font-size-base;
+  font-weight:   $font-weight-regular;
+  line-height:   $line-height-base;
+  color:         $color-text;
+  background:    $color-bg;
+}
+
+
+// ─── Headings ─────────────────────────────
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:     $font-display;
+  font-weight:     $font-weight-medium;
+  line-height:     $line-height-tight;
+  letter-spacing:  $letter-spacing-tight;
+  color:           $color-text;
+  margin-bottom:   $space-sm;
+}
+
+h1 {
+  font-size: $font-size-3xl;   // 44px — hero only
+
+  em {
+    color:      $color-accent;
+    font-style: italic;
+  }
+}
+
+h2 {
+  font-size: $font-size-2xl;   // 34px — section titles
+}
+
+h3 {
+  font-size: $font-size-xl;    // 26px — card headings
+}
+
+h4 {
+  font-size:   $font-size-lg;  // 20px — sub-section labels
+  font-family: $font-body;     // DM Sans — not display
+}
+
+h5 {
+  font-size:      $font-size-md;    // 17px
+  font-family:    $font-body;
+  letter-spacing: $letter-spacing-caps;
+  text-transform: uppercase;
+  color:          $color-text-muted;
+}
+
+h6 {
+  font-size:      $font-size-xs;    // 11px — eyebrow labels
+  font-family:    $font-body;
+  font-weight:    $font-weight-medium;
+  letter-spacing: $letter-spacing-caps;
+  text-transform: uppercase;
+  color:          $color-accent;
+}
+
+
+// ─── Body Text ────────────────────────────
+
+p {
+  font-size:     $font-size-base;
+  line-height:   $line-height-base;
+  color:         $color-text;
+  margin-bottom: $space-sm;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.text-sm {
+  font-size:   $font-size-sm;     // 13px
+  line-height: $line-height-base;
+}
+
+.text-xs {
+  font-size:   $font-size-xs;     // 11px
+  line-height: 1.5;
+}
+
+.text-muted {
+  color: $color-text-muted;
+}
+
+.text-faint {
+  color: $color-text-faint;
+}
+
+.text-accent {
+  color: $color-accent;
+}
+
+.text-blush {
+  color: $color-blush;
+}
+
+.text-champagne {
+  color: $color-champagne;
+}
+
+
+// ─── Links ────────────────────────────────
+
+a {
+  color:           $color-accent;
+  text-decoration: none;
+  transition:      color $transition-fast;
+
+  &:hover {
+    color: $color-blush;
+  }
+
+  &:focus-visible {
+    outline:        2px solid $color-accent;
+    outline-offset: 3px;
+    border-radius:  $radius-sm;
+  }
+}
+
+
+// ─── Eyebrow / Label ──────────────────────
+// Usage: <p class="eyebrow">AI · Skincare</p>
+
+.eyebrow {
+  font-family:    $font-body;
+  font-size:      $font-size-xs;
+  font-weight:    $font-weight-medium;
+  letter-spacing: $letter-spacing-caps;
+  text-transform: uppercase;
+  color:          $color-accent;
+  margin-bottom:  $space-sm;
+}
+
+
+// ─── Display / Hero ───────────────────────
+// Usage: <p class="display">Better skin.</p>
+
+.display {
+  font-family:    $font-display;
+  font-size:      clamp(2rem, 5vw, #{$font-size-3xl});
+  font-weight:    $font-weight-medium;
+  line-height:    $line-height-tight;
+  letter-spacing: $letter-spacing-tight;
+  color:          $color-text;
+}
+
+
+// ─── Lead / Subtitle ──────────────────────
+// Usage: <p class="lead">An AI-powered platform...</p>
+
+.lead {
+  font-size:   $font-size-md;
+  line-height: $line-height-relaxed;
+  color:       $color-text-muted;
+  max-width:   52ch;
+}
+
+
+// ─── Lists ────────────────────────────────
+
+ul, ol {
+  padding-left: 1.25rem;
+  margin-bottom: $space-sm;
+
+  li {
+    margin-bottom: 0.35rem;
+    color: $color-text;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+
+  li::before {
+    content:      '·';
+    color:        $color-accent;
+    margin-right: 0.5rem;
+    font-weight:  $font-weight-medium;
+  }
+}
+
+
+// ─── Inline Code ──────────────────────────
+
+code {
+  font-family:   $font-mono;
+  font-size:     0.85em;
+  color:         $color-champagne;
+  background:    $color-champagne-subtle;
+  padding:       0.15em 0.45em;
+  border-radius: $radius-sm;
+}
+
+
+// ─── Blockquote ───────────────────────────
+
+blockquote {
+  border-left:  2px solid $color-accent;
+  padding-left: $space-md;
+  margin:       $space-md 0;
+  border-radius: 0;
+
+  p {
+    font-family:  $font-display;
+    font-size:    $font-size-lg;
+    font-style:   italic;
+    color:        $color-text-muted;
+    margin:       0;
+  }
+}
+
+
+// ─── Horizontal Rule ──────────────────────
+
+hr {
+  border:        none;
+  border-top:    0.5px solid $color-border;
+  margin:        $space-lg 0;
+}
+
+
+// ─── Selection ────────────────────────────
+
+::selection {
+  background: $color-accent-subtle;
+  color:      $color-accent;
+}
