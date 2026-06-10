@@ -30,7 +30,7 @@ Feature	                  Skill Demonstrated
 Login system	   ->       Authentication
 Product database	  ->    SQL/data modeling
 Recommendation engine  ->	AI/logic
-Frontend UI	     ->       React/UX
+Frontend UI	     ->       React/UX ,scss
 Backend APIs	   ->       System architecture
 User dashboards	->        Analytics
 Ingredient filtering  ->  Data processing
